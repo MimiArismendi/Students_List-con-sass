@@ -1,0 +1,92 @@
+@import 'variables';
+@import 'mixin';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  //text-align: center;
+}
+
+.row::before, .row::after {
+  content: " ";
+  display: table;
+}
+
+.row::after {
+  clear: both;
+}
+
+.navCapitan{
+    background: $lab_yellow;
+    color: $colorWhite;
+    overflow: auto;
+}
+
+.listaMenu{
+    list-style: $style_list;
+    @media (min-width: $break-small) {
+		@include grid (12);
+	}
+	@media (min-width: $break-medium) {
+		@include grid (3);
+	}
+	@media (min-width: $break-large) {
+		@include grid (3);
+	}
+}
+
+.menu {
+	background: $lab_gray;
+	margin-top: 5px;
+	color: $colorWhite;
+}
+
+.menuAmarillo{
+    @extend .menu;
+    background: $lab_yellow;
+}
+
+.contenedorLista{
+    background: $colorWhite;
+    color: $lab_gray;
+    @media (min-width: $break-small) {
+		@include grid (12);
+	}
+	@media (min-width: $break-medium) {
+		@include grid (9);
+	}
+	@media (min-width: $break-large) {
+		@include grid (6);
+	}
+    
+    & .lista{
+        list-style: $style_list;
+    }
+}
+
+.aside{
+    background: $lab_gray;
+    color: $colorWhite;
+    padding: $padding;
+    text-align: center;
+    @media (min-width: $break-small) {
+		@include grid (12);
+	}
+	@media (min-width: $break-medium) {
+		@include grid (12);
+	}
+	@media (min-width: $break-large) {
+		@include grid (3);
+	}
+}
+
+.footer{
+    background: $lab_gray;
+    color: $colorWhite;
+    clear: both;
+    margin-top: 10px;
+    text-align: center;
+}
+
+

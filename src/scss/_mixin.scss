@@ -1,0 +1,6 @@
+@mixin grid ($columnas) {
+	width: $columna * ($columnas);
+    min-height: 8px;
+	padding: 12px;
+    float: left;
+}
